@@ -151,10 +151,10 @@ public:
             product = new ConcreteProductC(parent);
             break;
         case 'D':
-            product = new ConcreteProductC(parent);
+            product = new ConcreteProductD(parent);
             break;
         case 'E':
-            product = new ConcreteProductC(parent);
+            product = new ConcreteProductE(parent);
             break;
 
         default:

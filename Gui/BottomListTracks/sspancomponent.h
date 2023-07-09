@@ -35,9 +35,16 @@ public:
     void setColor(QColor eColor){
         color = eColor;
     }
+    void setTypeObject(int typeObj){
+        mTypeObj = typeObj;
+    }
+    int getTypeObject() const{
+        return mTypeObj;
+    }
 private:
     QRect mRect;
     QColor color;
+    int mTypeObj;
 };
 
 class SSpanComponent : public QWidget
@@ -50,6 +57,7 @@ public:
     void setCurrentType(int eCurrentType){
         currentType = eCurrentType;
     }
+    int getTrackObjectByFrameID(int i) const;
 protected:
     void mousePressEvent(QMouseEvent* event) override;
     void mouseMoveEvent(QMouseEvent* event) override;

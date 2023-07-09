@@ -14,6 +14,7 @@
 #include <QStyleOptionViewItem>
 #include "sspancomponent.h"
 #include "cbottomsubject.h"
+#include "cframeclass.h"
 
 class CustomItemDelegate : public QStyledItemDelegate {
 public:
@@ -57,12 +58,13 @@ public:
     ~SAVComponent();
 
     void attachToObserver(ConcreteObserver * eObser);
-
+    CFrameClass getFrameByID(int idFrame);
 public slots:
     void handleSignal(int data);
 private slots:
     void addTrack();
     void deleteTrack();
+    void playTrack();
 
 protected:
     void paintEvent(QPaintEvent* event) override;

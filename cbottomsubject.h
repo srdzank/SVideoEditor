@@ -5,7 +5,6 @@
 #include <iostream>
 #include <QWidget>
 
-
 // Observer interface
 class Observer : public QWidget
 {

@@ -35,10 +35,15 @@ SAVComponent::SAVComponent(QWidget *parent)
     QPushButton *deleteButton = new QPushButton("Delete Track");
     connect(deleteButton, &QPushButton::clicked, this, &SAVComponent::deleteTrack);
 
+    // Create a button for deleting tracks
+    QPushButton *playButton = new QPushButton("Play Track");
+    connect(playButton, &QPushButton::clicked, this, &SAVComponent::playTrack);
+
 
     // Add the list widget, input field, and button to the scroll area widget
     buttonLayout->addWidget(addButton);
     buttonLayout->addWidget(deleteButton);
+    buttonLayout->addWidget(playButton);
     buttonLayout->addWidget(trackInput);
     scrollLayout->addWidget(trackList);
 
@@ -67,6 +72,18 @@ void SAVComponent::handleSignal(int data){
         listOfSpanComponent.at(i)->setCurrentType(data);
     }
 }
+
+CFrameClass SAVComponent::getFrameByID(int idFrame){
+    CFrameClass frame;
+    for (int i = 0; i < listOfSpanComponent.size(); i++)
+    {
+        frame.Id = i;
+        int idBlock = listOfSpanComponent.at(i)->getTrackObjectByFrameID(idFrame);
+        frame.listOfObj.push_back(idBlock);
+    }
+    return frame;
+}
+
 
 void SAVComponent::addTrack() {
     QString trackName = trackInput->text();
@@ -104,6 +121,15 @@ void SAVComponent::deleteTrack() {
             delete item;
         }
     }
+}
+
+
+void SAVComponent::playTrack() {
+    for (int i= 0; i < 2000; i+=50){
+    CFrameClass item = getFrameByID(i);
+        int stop = 0;
+    }
+
 }
 
 void SAVComponent::paintEvent(QPaintEvent* event){

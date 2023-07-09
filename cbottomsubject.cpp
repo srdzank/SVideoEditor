@@ -1,5 +1,5 @@
 #include "cbottomsubject.h"
-
+// Obserser class
 
 void Subject::addObserver(Observer* observer)
 {

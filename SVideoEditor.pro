@@ -15,6 +15,7 @@ SOURCES += \
     Gui/BottomListTracks/sspancomponent.cpp \
     Gui/Main/scomponent.cpp \
     cbottomsubject.cpp \
+    cframeclass.cpp \
     main.cpp \
     mainwindow.cpp
 
@@ -25,6 +26,7 @@ HEADERS += \
     Gui/BottomListTracks/sspancomponent.h \
     Gui/Main/scomponent.h \
     cbottomsubject.h \
+    cframeclass.h \
     mainwindow.h
 
 FORMS += \

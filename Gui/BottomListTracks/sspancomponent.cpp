@@ -46,11 +46,18 @@ void SSpanComponent::mousePressEvent(QMouseEvent* event)
             case 2:
                 color = Qt::yellow;
                 break;
+            case 3:
+                color = Qt::cyan;
+                break;
+            case 4:
+                color = Qt::green;
+                break;
 
             default:
                 break;
             }
             newTrackObject.setColor(color);
+            newTrackObject.setTypeObject(currentType);
             mTrackObjects.append(newTrackObject);
         }
         else
@@ -166,4 +173,15 @@ void SSpanComponent::paintEvent(QPaintEvent* event)
     }
 
     QWidget::paintEvent(event);
+}
+
+int SSpanComponent::getTrackObjectByFrameID(int id) const {
+    int idx = -1;
+    for(int i = 0; i < mTrackObjects.size(); i++){
+        if(mTrackObjects.at(i).getRect().contains(id, 10)){
+            idx = mTrackObjects.at(i).getTypeObject();
+            break;
+        }
+    }
+    return idx;
 }
