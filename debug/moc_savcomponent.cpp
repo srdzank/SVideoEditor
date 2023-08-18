@@ -21,32 +21,32 @@
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
-struct qt_meta_stringdata_SAVComponent_t {
+struct qt_meta_stringdata_CAudioVideoComponent_t {
     QByteArrayData data[7];
-    char stringdata0[63];
+    char stringdata0[71];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_SAVComponent_t, stringdata0) + ofs \
+    qptrdiff(offsetof(qt_meta_stringdata_CAudioVideoComponent_t, stringdata0) + ofs \
         - idx * sizeof(QByteArrayData)) \
     )
-static const qt_meta_stringdata_SAVComponent_t qt_meta_stringdata_SAVComponent = {
+static const qt_meta_stringdata_CAudioVideoComponent_t qt_meta_stringdata_CAudioVideoComponent = {
     {
-QT_MOC_LITERAL(0, 0, 12), // "SAVComponent"
-QT_MOC_LITERAL(1, 13, 12), // "handleSignal"
-QT_MOC_LITERAL(2, 26, 0), // ""
-QT_MOC_LITERAL(3, 27, 4), // "data"
-QT_MOC_LITERAL(4, 32, 8), // "addTrack"
-QT_MOC_LITERAL(5, 41, 11), // "deleteTrack"
-QT_MOC_LITERAL(6, 53, 9) // "playTrack"
+QT_MOC_LITERAL(0, 0, 20), // "CAudioVideoComponent"
+QT_MOC_LITERAL(1, 21, 12), // "handleSignal"
+QT_MOC_LITERAL(2, 34, 0), // ""
+QT_MOC_LITERAL(3, 35, 4), // "data"
+QT_MOC_LITERAL(4, 40, 8), // "addTrack"
+QT_MOC_LITERAL(5, 49, 11), // "deleteTrack"
+QT_MOC_LITERAL(6, 61, 9) // "playTrack"
 
     },
-    "SAVComponent\0handleSignal\0\0data\0"
-    "addTrack\0deleteTrack\0playTrack"
+    "CAudioVideoComponent\0handleSignal\0\0"
+    "data\0addTrack\0deleteTrack\0playTrack"
 };
 #undef QT_MOC_LITERAL
 
-static const uint qt_meta_data_SAVComponent[] = {
+static const uint qt_meta_data_CAudioVideoComponent[] = {
 
  // content:
        8,       // revision
@@ -74,10 +74,10 @@ static const uint qt_meta_data_SAVComponent[] = {
        0        // eod
 };
 
-void SAVComponent::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void CAudioVideoComponent::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
-        auto *_t = static_cast<SAVComponent *>(_o);
+        auto *_t = static_cast<CAudioVideoComponent *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->handleSignal((*reinterpret_cast< int(*)>(_a[1]))); break;
@@ -89,30 +89,30 @@ void SAVComponent::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
     }
 }
 
-QT_INIT_METAOBJECT const QMetaObject SAVComponent::staticMetaObject = { {
+QT_INIT_METAOBJECT const QMetaObject CAudioVideoComponent::staticMetaObject = { {
     QMetaObject::SuperData::link<QWidget::staticMetaObject>(),
-    qt_meta_stringdata_SAVComponent.data,
-    qt_meta_data_SAVComponent,
+    qt_meta_stringdata_CAudioVideoComponent.data,
+    qt_meta_data_CAudioVideoComponent,
     qt_static_metacall,
     nullptr,
     nullptr
 } };
 
 
-const QMetaObject *SAVComponent::metaObject() const
+const QMetaObject *CAudioVideoComponent::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *SAVComponent::qt_metacast(const char *_clname)
+void *CAudioVideoComponent::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_SAVComponent.stringdata0))
+    if (!strcmp(_clname, qt_meta_stringdata_CAudioVideoComponent.stringdata0))
         return static_cast<void*>(this);
     return QWidget::qt_metacast(_clname);
 }
 
-int SAVComponent::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int CAudioVideoComponent::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QWidget::qt_metacall(_c, _id, _a);
     if (_id < 0)

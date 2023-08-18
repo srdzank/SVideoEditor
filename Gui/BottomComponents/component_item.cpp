@@ -1,47 +1,47 @@
 #include "component_item.h"
 
-SComponentA::SComponentA(QWidget *parent) : QWidget(parent)
+CBaseComponent::CBaseComponent(QWidget *parent) : QWidget(parent)
 {
     isHovered = false;
     setMouseTracking(true);
 }
 
-void SComponentA::setId(int i){
+void CBaseComponent::setId(int i){
     mId = i;
 }
 
-void SComponentA::mousePressEvent(QMouseEvent* event)
+void CBaseComponent::mousePressEvent(QMouseEvent* event)
 {
     emit clickButton(mId);
     QWidget::mousePressEvent(event);
 }
 
-void SComponentA::mouseMoveEvent(QMouseEvent* event)
+void CBaseComponent::mouseMoveEvent(QMouseEvent* event)
 {
     QWidget::mouseMoveEvent(event);
 }
 
 
-void SComponentA::mouseReleaseEvent(QMouseEvent* event)
+void CBaseComponent::mouseReleaseEvent(QMouseEvent* event)
 {
     QWidget::mouseReleaseEvent(event);
 }
 
 
-void SComponentA::enterEvent(QEvent* event) {
+void CBaseComponent::enterEvent(QEvent* event) {
     isHovered = true;
     update(); // Trigger repaint to change color
     QWidget::enterEvent(event);
 }
 
-void SComponentA::leaveEvent(QEvent* event) {
+void CBaseComponent::leaveEvent(QEvent* event) {
     isHovered = false;
     update(); // Trigger repaint to change color
     QWidget::leaveEvent(event);
 }
 
 
-void SComponentA::paintEvent(QPaintEvent* event)
+void CBaseComponent::paintEvent(QPaintEvent* event)
 {
     // Perform custom drawing here
     QPainter painter(this);

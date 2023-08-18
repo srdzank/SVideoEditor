@@ -1,6 +1,6 @@
 #include "sspancomponent.h"
 
-SSpanComponent::SSpanComponent(QWidget *parent) : QWidget(parent)
+CTrackItem::CTrackItem(QWidget *parent) : QWidget(parent)
 {
     setMouseTracking(true);
     mIsMovingObject = false;
@@ -8,11 +8,11 @@ SSpanComponent::SSpanComponent(QWidget *parent) : QWidget(parent)
     mSelectedObjectIndex = -1;
 }
 
-void SSpanComponent::setId(int i){
+void CTrackItem::setId(int i){
     mId = i;
 }
 
-void SSpanComponent::mousePressEvent(QMouseEvent* event)
+void CTrackItem::mousePressEvent(QMouseEvent* event)
 {
     if (event->button() == Qt::LeftButton)
     {
@@ -103,7 +103,7 @@ void SSpanComponent::mousePressEvent(QMouseEvent* event)
     QWidget::mousePressEvent(event);
 }
 
-void SSpanComponent::mouseMoveEvent(QMouseEvent* event)
+void CTrackItem::mouseMoveEvent(QMouseEvent* event)
 {
     QPoint newPosition = event->pos();
     if (mIsMovingObject && mSelectedObjectIndex >= 0 && mSelectedObjectIndex < mTrackObjects.size())
@@ -155,14 +155,14 @@ void SSpanComponent::mouseMoveEvent(QMouseEvent* event)
 }
 
 
-void SSpanComponent::mouseReleaseEvent(QMouseEvent* event)
+void CTrackItem::mouseReleaseEvent(QMouseEvent* event)
 {
     mIsMovingObject = false;
     mIsResizingObject = false;
     QWidget::mouseReleaseEvent(event);
 }
 
-void SSpanComponent::paintEvent(QPaintEvent* event)
+void CTrackItem::paintEvent(QPaintEvent* event)
 {
     QPainter painter(this);
 
@@ -175,7 +175,7 @@ void SSpanComponent::paintEvent(QPaintEvent* event)
     QWidget::paintEvent(event);
 }
 
-int SSpanComponent::getTrackObjectByFrameID(int id) const {
+int CTrackItem::getTrackObjectByFrameID(int id) const {
     int idx = -1;
     for(int i = 0; i < mTrackObjects.size(); i++){
         if(mTrackObjects.at(i).getRect().contains(id, 10)){

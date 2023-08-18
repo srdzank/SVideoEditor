@@ -21,25 +21,25 @@
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
-struct qt_meta_stringdata_SSpanComponent_t {
+struct qt_meta_stringdata_CTrackItem_t {
     QByteArrayData data[1];
-    char stringdata0[15];
+    char stringdata0[11];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_SSpanComponent_t, stringdata0) + ofs \
+    qptrdiff(offsetof(qt_meta_stringdata_CTrackItem_t, stringdata0) + ofs \
         - idx * sizeof(QByteArrayData)) \
     )
-static const qt_meta_stringdata_SSpanComponent_t qt_meta_stringdata_SSpanComponent = {
+static const qt_meta_stringdata_CTrackItem_t qt_meta_stringdata_CTrackItem = {
     {
-QT_MOC_LITERAL(0, 0, 14) // "SSpanComponent"
+QT_MOC_LITERAL(0, 0, 10) // "CTrackItem"
 
     },
-    "SSpanComponent"
+    "CTrackItem"
 };
 #undef QT_MOC_LITERAL
 
-static const uint qt_meta_data_SSpanComponent[] = {
+static const uint qt_meta_data_CTrackItem[] = {
 
  // content:
        8,       // revision
@@ -55,7 +55,7 @@ static const uint qt_meta_data_SSpanComponent[] = {
        0        // eod
 };
 
-void SSpanComponent::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void CTrackItem::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     Q_UNUSED(_o);
     Q_UNUSED(_id);
@@ -63,30 +63,30 @@ void SSpanComponent::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
     Q_UNUSED(_a);
 }
 
-QT_INIT_METAOBJECT const QMetaObject SSpanComponent::staticMetaObject = { {
+QT_INIT_METAOBJECT const QMetaObject CTrackItem::staticMetaObject = { {
     QMetaObject::SuperData::link<QWidget::staticMetaObject>(),
-    qt_meta_stringdata_SSpanComponent.data,
-    qt_meta_data_SSpanComponent,
+    qt_meta_stringdata_CTrackItem.data,
+    qt_meta_data_CTrackItem,
     qt_static_metacall,
     nullptr,
     nullptr
 } };
 
 
-const QMetaObject *SSpanComponent::metaObject() const
+const QMetaObject *CTrackItem::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *SSpanComponent::qt_metacast(const char *_clname)
+void *CTrackItem::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_SSpanComponent.stringdata0))
+    if (!strcmp(_clname, qt_meta_stringdata_CTrackItem.stringdata0))
         return static_cast<void*>(this);
     return QWidget::qt_metacast(_clname);
 }
 
-int SSpanComponent::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int CTrackItem::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QWidget::qt_metacall(_c, _id, _a);
     return _id;

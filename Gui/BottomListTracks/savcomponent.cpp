@@ -2,7 +2,7 @@
 #include "savcomponent.h"
 
 
-SAVComponent::SAVComponent(QWidget *parent)
+CAudioVideoComponent::CAudioVideoComponent(QWidget *parent)
     : QWidget(parent)
 {
     // Create a scroll area
@@ -14,8 +14,8 @@ SAVComponent::SAVComponent(QWidget *parent)
     QVBoxLayout *scrollLayout = new QVBoxLayout(scrollContent);
 
     // Create a list widget to display the audio tracks
-    trackList = new CustomListWidget();
-    itemDelegate = new CustomItemDelegate();
+    trackList = new CCustomListWidget();
+    itemDelegate = new CCustomItemDelegate();
     trackList->setItemDelegate(itemDelegate);
 
 
@@ -28,16 +28,16 @@ SAVComponent::SAVComponent(QWidget *parent)
     QPushButton *addButton = new QPushButton("Add Track");
 
     // Connect the "Add Track" button to add a track to the list
-    connect(addButton, &QPushButton::clicked, this, &SAVComponent::addTrack);
+    connect(addButton, &QPushButton::clicked, this, &CAudioVideoComponent::addTrack);
 
 
     // Create a button for deleting tracks
     QPushButton *deleteButton = new QPushButton("Delete Track");
-    connect(deleteButton, &QPushButton::clicked, this, &SAVComponent::deleteTrack);
+    connect(deleteButton, &QPushButton::clicked, this, &CAudioVideoComponent::deleteTrack);
 
     // Create a button for deleting tracks
     QPushButton *playButton = new QPushButton("Play Track");
-    connect(playButton, &QPushButton::clicked, this, &SAVComponent::playTrack);
+    connect(playButton, &QPushButton::clicked, this, &CAudioVideoComponent::playTrack);
 
 
     // Add the list widget, input field, and button to the scroll area widget
@@ -57,49 +57,49 @@ SAVComponent::SAVComponent(QWidget *parent)
     layout->addWidget(scrollArea);
 }
 
-SAVComponent::~SAVComponent(){
+CAudioVideoComponent::~CAudioVideoComponent(){
 }
 
 
-void SAVComponent::attachToObserver(ConcreteObserver * eObser){
+void CAudioVideoComponent::attachToObserver(ConcreteObserver * eObser){
     mObser = eObser;
     connect(mObser, SIGNAL(someSignal(int)), this, SLOT(handleSignal(int)));
 }
-void SAVComponent::handleSignal(int data){
+void CAudioVideoComponent::handleSignal(int data){
     currentType = data;
-    for (int i = 0; i < listOfSpanComponent.size(); i++)
+    for (int i = 0; i < listOfTracks.size(); i++)
     {
-        listOfSpanComponent.at(i)->setCurrentType(data);
+        listOfTracks.at(i)->setCurrentType(data);
     }
 }
 
-CFrameClass SAVComponent::getFrameByID(int idFrame){
+CFrameClass CAudioVideoComponent::getFrameByID(int idFrame){
     CFrameClass frame;
-    for (int i = 0; i < listOfSpanComponent.size(); i++)
+    for (int i = 0; i < listOfTracks.size(); i++)
     {
         frame.Id = i;
-        int idBlock = listOfSpanComponent.at(i)->getTrackObjectByFrameID(idFrame);
+        int idBlock = listOfTracks.at(i)->getTrackObjectByFrameID(idFrame);
         frame.listOfObj.push_back(idBlock);
     }
     return frame;
 }
 
 
-void SAVComponent::addTrack() {
+void CAudioVideoComponent::addTrack() {
     QString trackName = trackInput->text();
     QListWidgetItem *item = new QListWidgetItem();
-    SSpanComponent *sobject = new SSpanComponent(this);
+    CTrackItem *sobject = new CTrackItem(this);
     trackList->addItem(item);
     trackList->setItemWidget(item, sobject);
     listOfWidgetItem.push_back(item);
-    listOfSpanComponent.push_back(sobject);
+    listOfTracks.push_back(sobject);
     trackInput->clear();
     trackList->show();
 
 }
 
 
-void SAVComponent::deleteTrack() {
+void CAudioVideoComponent::deleteTrack() {
     QListWidgetItem *selectedItem = trackList->currentItem();
     if (selectedItem) {
         int selectedIndex = trackList->row(selectedItem);
@@ -108,9 +108,9 @@ void SAVComponent::deleteTrack() {
         trackList->takeItem(selectedIndex);
 
         // Remove the corresponding widget from the span components list
-        if (selectedIndex < listOfSpanComponent.size()) {
-            SSpanComponent *spanComponent = listOfSpanComponent.at(selectedIndex);
-            listOfSpanComponent.removeAt(selectedIndex);
+        if (selectedIndex < listOfTracks.size()) {
+            CTrackItem *spanComponent = listOfTracks.at(selectedIndex);
+            listOfTracks.removeAt(selectedIndex);
             delete spanComponent;
         }
 
@@ -124,7 +124,7 @@ void SAVComponent::deleteTrack() {
 }
 
 
-void SAVComponent::playTrack() {
+void CAudioVideoComponent::playTrack() {
     for (int i= 0; i < 2000; i+=50){
     CFrameClass item = getFrameByID(i);
         int stop = 0;
@@ -132,7 +132,7 @@ void SAVComponent::playTrack() {
 
 }
 
-void SAVComponent::paintEvent(QPaintEvent* event){
+void CAudioVideoComponent::paintEvent(QPaintEvent* event){
     // Perform custom drawing here
     QWidget::paintEvent(event);
 }

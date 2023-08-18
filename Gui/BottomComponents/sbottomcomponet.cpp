@@ -1,48 +1,48 @@
 
 #include "sbottomcomponet.h"
 
-SBottomComponent::SBottomComponent(QWidget *parent)
+CBottomComponent::CBottomComponent(QWidget *parent)
     : QWidget{parent}
 {
     //Create button 0
-    productA = Factory::createProduct('A', this);
+    productA = CFactory::createCustomComponent('A', this);
     if (productA){
         productA->operation();
         connect(productA->getSpan(), SIGNAL(clickButton(int)), this, SLOT(ProcClickButton(int)));
     }
 
     //Create button 1
-    productB = Factory::createProduct('B', this);
+    productB = CFactory::createCustomComponent('B', this);
     if (productB){
         productB->operation();
         connect(productB->getSpan(), SIGNAL(clickButton(int)), this, SLOT(ProcClickButton(int)));
     }
 
     //Create button 2
-    productC = Factory::createProduct('C', this);
+    productC = CFactory::createCustomComponent('C', this);
     if (productC){
         productC->operation();
         connect(productC->getSpan(), SIGNAL(clickButton(int)), this, SLOT(ProcClickButton(int)));
     }
 
     //Create button 3
-    productC = Factory::createProduct('D', this);
-    if (productC){
-        productC->operation();
-        connect(productC->getSpan(), SIGNAL(clickButton(int)), this, SLOT(ProcClickButton(int)));
+    productD = CFactory::createCustomComponent('D', this);
+    if (productD){
+        productD->operation();
+        connect(productD->getSpan(), SIGNAL(clickButton(int)), this, SLOT(ProcClickButton(int)));
     }
 
     //Create button 4
-    productC = Factory::createProduct('E', this);
-    if (productC){
-        productC->operation();
-        connect(productC->getSpan(), SIGNAL(clickButton(int)), this, SLOT(ProcClickButton(int)));
+    productE = CFactory::createCustomComponent('E', this);
+    if (productE){
+        productE->operation();
+        connect(productE->getSpan(), SIGNAL(clickButton(int)), this, SLOT(ProcClickButton(int)));
     }
 
 }
 
 
-void SBottomComponent::ProcClickButton(int id){
+void CBottomComponent::ProcClickButton(int id){
     int i = 0;
     i = id;
     if (mSubj){
@@ -50,13 +50,15 @@ void SBottomComponent::ProcClickButton(int id){
     }
 }
 
-SBottomComponent::~SBottomComponent(){
+CBottomComponent::~CBottomComponent(){
     delete productA;
     delete productB;
     delete productC;
+    delete productD;
+    delete productE;
 }
 
-void SBottomComponent::closeEvent(QCloseEvent* event){
+void CBottomComponent::closeEvent(QCloseEvent* event){
     // Handle close event
     // ...
 
@@ -64,7 +66,7 @@ void SBottomComponent::closeEvent(QCloseEvent* event){
     QWidget::closeEvent(event);
 }
 
-void SBottomComponent::keyPressEvent(QKeyEvent* event){
+void CBottomComponent::keyPressEvent(QKeyEvent* event){
     // Handle key press event
     // ...
 
@@ -72,7 +74,7 @@ void SBottomComponent::keyPressEvent(QKeyEvent* event){
     QWidget::keyPressEvent(event);
 }
 
-void SBottomComponent::mousePressEvent(QMouseEvent* event){
+void CBottomComponent::mousePressEvent(QMouseEvent* event){
     // Handle mouse press event
     // ...
 
@@ -80,7 +82,7 @@ void SBottomComponent::mousePressEvent(QMouseEvent* event){
     QWidget::mousePressEvent(event);
 }
 
-void SBottomComponent::paintEvent(QPaintEvent* event){
+void CBottomComponent::paintEvent(QPaintEvent* event){
     // Perform custom drawing here
     QPainter painter(this);
 

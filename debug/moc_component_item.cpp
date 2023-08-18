@@ -21,27 +21,27 @@
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
-struct qt_meta_stringdata_SComponentA_t {
+struct qt_meta_stringdata_CBaseComponent_t {
     QByteArrayData data[3];
-    char stringdata0[25];
+    char stringdata0[28];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_SComponentA_t, stringdata0) + ofs \
+    qptrdiff(offsetof(qt_meta_stringdata_CBaseComponent_t, stringdata0) + ofs \
         - idx * sizeof(QByteArrayData)) \
     )
-static const qt_meta_stringdata_SComponentA_t qt_meta_stringdata_SComponentA = {
+static const qt_meta_stringdata_CBaseComponent_t qt_meta_stringdata_CBaseComponent = {
     {
-QT_MOC_LITERAL(0, 0, 11), // "SComponentA"
-QT_MOC_LITERAL(1, 12, 11), // "clickButton"
-QT_MOC_LITERAL(2, 24, 0) // ""
+QT_MOC_LITERAL(0, 0, 14), // "CBaseComponent"
+QT_MOC_LITERAL(1, 15, 11), // "clickButton"
+QT_MOC_LITERAL(2, 27, 0) // ""
 
     },
-    "SComponentA\0clickButton\0"
+    "CBaseComponent\0clickButton\0"
 };
 #undef QT_MOC_LITERAL
 
-static const uint qt_meta_data_SComponentA[] = {
+static const uint qt_meta_data_CBaseComponent[] = {
 
  // content:
        8,       // revision
@@ -63,10 +63,10 @@ static const uint qt_meta_data_SComponentA[] = {
        0        // eod
 };
 
-void SComponentA::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void CBaseComponent::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
-        auto *_t = static_cast<SComponentA *>(_o);
+        auto *_t = static_cast<CBaseComponent *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->clickButton((*reinterpret_cast< int(*)>(_a[1]))); break;
@@ -75,8 +75,8 @@ void SComponentA::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
-            using _t = void (SComponentA::*)(int );
-            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&SComponentA::clickButton)) {
+            using _t = void (CBaseComponent::*)(int );
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&CBaseComponent::clickButton)) {
                 *result = 0;
                 return;
             }
@@ -84,30 +84,30 @@ void SComponentA::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
     }
 }
 
-QT_INIT_METAOBJECT const QMetaObject SComponentA::staticMetaObject = { {
+QT_INIT_METAOBJECT const QMetaObject CBaseComponent::staticMetaObject = { {
     QMetaObject::SuperData::link<QWidget::staticMetaObject>(),
-    qt_meta_stringdata_SComponentA.data,
-    qt_meta_data_SComponentA,
+    qt_meta_stringdata_CBaseComponent.data,
+    qt_meta_data_CBaseComponent,
     qt_static_metacall,
     nullptr,
     nullptr
 } };
 
 
-const QMetaObject *SComponentA::metaObject() const
+const QMetaObject *CBaseComponent::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *SComponentA::qt_metacast(const char *_clname)
+void *CBaseComponent::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_SComponentA.stringdata0))
+    if (!strcmp(_clname, qt_meta_stringdata_CBaseComponent.stringdata0))
         return static_cast<void*>(this);
     return QWidget::qt_metacast(_clname);
 }
 
-int SComponentA::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int CBaseComponent::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QWidget::qt_metacall(_c, _id, _a);
     if (_id < 0)
@@ -125,7 +125,7 @@ int SComponentA::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void SComponentA::clickButton(int _t1)
+void CBaseComponent::clickButton(int _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);

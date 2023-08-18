@@ -16,7 +16,7 @@
 #include "cbottomsubject.h"
 #include "cframeclass.h"
 
-class CustomItemDelegate : public QStyledItemDelegate {
+class CCustomItemDelegate : public QStyledItemDelegate {
 public:
     void paint(QPainter* painter, const QStyleOptionViewItem& option, const QModelIndex& index) const override {
         // Call the base class paint function to perform the default painting
@@ -37,10 +37,10 @@ public:
     }
 };
 
-class CustomListWidget : public QListWidget
+class CCustomListWidget : public QListWidget
 {
 public:
-    CustomListWidget(QWidget *parent = nullptr) : QListWidget(parent) {}
+    CCustomListWidget(QWidget *parent = nullptr) : QListWidget(parent) {}
 
 protected:
     void paintEvent(QPaintEvent *event) override
@@ -50,12 +50,11 @@ protected:
     }
 };
 
-
-class SAVComponent : public QWidget {
+class CAudioVideoComponent : public QWidget {
     Q_OBJECT
 public:
-    SAVComponent(QWidget *parent = nullptr);
-    ~SAVComponent();
+    CAudioVideoComponent(QWidget *parent = nullptr);
+    ~CAudioVideoComponent();
 
     void attachToObserver(ConcreteObserver * eObser);
     CFrameClass getFrameByID(int idFrame);
@@ -69,11 +68,11 @@ private slots:
 protected:
     void paintEvent(QPaintEvent* event) override;
 private:
-    CustomListWidget *trackList;
+    CCustomListWidget *trackList;
     QLineEdit *trackInput;
-    CustomItemDelegate* itemDelegate;
+    CCustomItemDelegate* itemDelegate;
     QVector<QListWidgetItem*> listOfWidgetItem;
-    QVector<SSpanComponent*> listOfSpanComponent;
+    QVector<CTrackItem*> listOfTracks;
     ConcreteObserver * mObser;
     int currentType;
 };

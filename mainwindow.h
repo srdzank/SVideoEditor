@@ -29,11 +29,15 @@ private slots:
 
 
 
+    void on_actionOpen_triggered();
+
+    void on_actionNew_File_triggered();
+
 private:
     Ui::MainWindow *ui;
     SComponent *comp;
-    SBottomComponent *bcomp;
-    SAVComponent *avcomp;
+    CBottomComponent *bcomp;
+    CAudioVideoComponent *avcomp;
     Subject *subj;
     ConcreteObserver* observer1;
 };

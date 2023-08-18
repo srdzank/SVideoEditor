@@ -21,28 +21,28 @@
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
-struct qt_meta_stringdata_SBottomComponent_t {
+struct qt_meta_stringdata_CBottomComponent_t {
     QByteArrayData data[4];
     char stringdata0[44];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_SBottomComponent_t, stringdata0) + ofs \
+    qptrdiff(offsetof(qt_meta_stringdata_CBottomComponent_t, stringdata0) + ofs \
         - idx * sizeof(QByteArrayData)) \
     )
-static const qt_meta_stringdata_SBottomComponent_t qt_meta_stringdata_SBottomComponent = {
+static const qt_meta_stringdata_CBottomComponent_t qt_meta_stringdata_CBottomComponent = {
     {
-QT_MOC_LITERAL(0, 0, 16), // "SBottomComponent"
+QT_MOC_LITERAL(0, 0, 16), // "CBottomComponent"
 QT_MOC_LITERAL(1, 17, 9), // "sigUpdate"
 QT_MOC_LITERAL(2, 27, 0), // ""
 QT_MOC_LITERAL(3, 28, 15) // "ProcClickButton"
 
     },
-    "SBottomComponent\0sigUpdate\0\0ProcClickButton"
+    "CBottomComponent\0sigUpdate\0\0ProcClickButton"
 };
 #undef QT_MOC_LITERAL
 
-static const uint qt_meta_data_SBottomComponent[] = {
+static const uint qt_meta_data_CBottomComponent[] = {
 
  // content:
        8,       // revision
@@ -70,10 +70,10 @@ static const uint qt_meta_data_SBottomComponent[] = {
        0        // eod
 };
 
-void SBottomComponent::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void CBottomComponent::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
-        auto *_t = static_cast<SBottomComponent *>(_o);
+        auto *_t = static_cast<CBottomComponent *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->sigUpdate(); break;
@@ -83,8 +83,8 @@ void SBottomComponent::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
-            using _t = void (SBottomComponent::*)();
-            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&SBottomComponent::sigUpdate)) {
+            using _t = void (CBottomComponent::*)();
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&CBottomComponent::sigUpdate)) {
                 *result = 0;
                 return;
             }
@@ -92,30 +92,30 @@ void SBottomComponent::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
     }
 }
 
-QT_INIT_METAOBJECT const QMetaObject SBottomComponent::staticMetaObject = { {
+QT_INIT_METAOBJECT const QMetaObject CBottomComponent::staticMetaObject = { {
     QMetaObject::SuperData::link<QWidget::staticMetaObject>(),
-    qt_meta_stringdata_SBottomComponent.data,
-    qt_meta_data_SBottomComponent,
+    qt_meta_stringdata_CBottomComponent.data,
+    qt_meta_data_CBottomComponent,
     qt_static_metacall,
     nullptr,
     nullptr
 } };
 
 
-const QMetaObject *SBottomComponent::metaObject() const
+const QMetaObject *CBottomComponent::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *SBottomComponent::qt_metacast(const char *_clname)
+void *CBottomComponent::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_SBottomComponent.stringdata0))
+    if (!strcmp(_clname, qt_meta_stringdata_CBottomComponent.stringdata0))
         return static_cast<void*>(this);
     return QWidget::qt_metacast(_clname);
 }
 
-int SBottomComponent::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int CBottomComponent::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QWidget::qt_metacall(_c, _id, _a);
     if (_id < 0)
@@ -133,7 +133,7 @@ int SBottomComponent::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void SBottomComponent::sigUpdate()
+void CBottomComponent::sigUpdate()
 {
     QMetaObject::activate(this, &staticMetaObject, 0, nullptr);
 }

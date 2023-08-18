@@ -8,11 +8,11 @@
 
 
 
-class SComponentA : public QWidget
+class CBaseComponent : public QWidget
 {
     Q_OBJECT
 public:
-    explicit SComponentA(QWidget *parent = nullptr);
+    explicit CBaseComponent(QWidget *parent = nullptr);
 
     void setId(int i);
 protected:

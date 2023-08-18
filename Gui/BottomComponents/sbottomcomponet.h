@@ -13,21 +13,21 @@
 using namespace std;
 
 // Abstract base class
-class Product {
+class InterfaceProduct {
 public:
     virtual void operation() = 0;
     virtual QWidget* getSpan() = 0;
 };
 
 // Concrete product classes
-class ConcreteProductA : public Product {
+class CComponentButtonA : public InterfaceProduct {
 public:
-    ConcreteProductA(QWidget* parent){
+    CComponentButtonA(QWidget* parent){
         mParent = parent;
     }
-    ~ConcreteProductA();
+    ~CComponentButtonA();
     void operation() override {
-        span = new SComponentA(mParent);
+        span = new CBaseComponent(mParent);
         span->setGeometry(10, 10, 30, 30);
         span->setId(0);
         span->show();
@@ -39,17 +39,17 @@ public:
 
 private:
     QWidget* mParent;
-    SComponentA *span;
+    CBaseComponent *span;
 };
 
-class ConcreteProductB : public Product {
+class CComponentButtonB : public InterfaceProduct {
 public:
-    ConcreteProductB(QWidget* parent){
+    CComponentButtonB(QWidget* parent){
         mParent = parent;
     }
-    ~ConcreteProductB();
+    ~CComponentButtonB();
     void operation() override {
-        span = new SComponentA(mParent);
+        span = new CBaseComponent(mParent);
         span->setGeometry(60, 10, 30, 30);
         span->setId(1);
         span->show();
@@ -61,17 +61,17 @@ public:
 
 private:
     QWidget* mParent;
-    SComponentA *span;
+    CBaseComponent *span;
 };
 
-class ConcreteProductC : public Product {
+class CComponentButtonC : public InterfaceProduct {
 public:
-    ConcreteProductC(QWidget* parent){
+    CComponentButtonC(QWidget* parent){
         mParent = parent;
     }
-    ~ConcreteProductC();
+    ~CComponentButtonC();
     void operation() override {
-        span = new SComponentA(mParent);
+        span = new CBaseComponent(mParent);
         span->setGeometry(110, 10, 30, 30);
         span->setId(2);
         span->show();
@@ -83,17 +83,17 @@ public:
 
 private:
     QWidget* mParent;
-    SComponentA *span;
+    CBaseComponent *span;
 };
 
-class ConcreteProductD : public Product {
+class CComponentButtonD : public InterfaceProduct {
 public:
-    ConcreteProductD(QWidget* parent){
+    CComponentButtonD(QWidget* parent){
         mParent = parent;
     }
-    ~ConcreteProductD();
+    ~CComponentButtonD();
     void operation() override {
-        span = new SComponentA(mParent);
+        span = new CBaseComponent(mParent);
         span->setGeometry(160, 10, 30, 30);
         span->setId(3);
         span->show();
@@ -105,17 +105,17 @@ public:
 
 private:
     QWidget* mParent;
-    SComponentA *span;
+    CBaseComponent *span;
 };
 
-class ConcreteProductE : public Product {
+class CComponentButtonE : public InterfaceProduct {
 public:
-    ConcreteProductE(QWidget* parent){
+    CComponentButtonE(QWidget* parent){
         mParent = parent;
     }
-    ~ConcreteProductE();
+    ~CComponentButtonE();
     void operation() override {
-        span = new SComponentA(mParent);
+        span = new CBaseComponent(mParent);
         span->setGeometry(210, 10, 30, 30);
         span->setId(4);
         span->show();
@@ -127,34 +127,30 @@ public:
 
 private:
     QWidget* mParent;
-    SComponentA *span;
+    CBaseComponent *span;
 };
 
-
-
-
-
 // Factory class
-class Factory {
+class CFactory {
 public:
     // Factory method
-    static Product* createProduct(char productType, QWidget *parent) {
-        Product* product = nullptr;
+    static InterfaceProduct* createCustomComponent(char productType, QWidget *parent) {
+        InterfaceProduct* product = nullptr;
         switch (productType) {
         case 'A':
-            product = new ConcreteProductA(parent);
+            product = new CComponentButtonA(parent);
             break;
         case 'B':
-            product = new ConcreteProductB(parent);
+            product = new CComponentButtonB(parent);
             break;
         case 'C':
-            product = new ConcreteProductC(parent);
+            product = new CComponentButtonC(parent);
             break;
         case 'D':
-            product = new ConcreteProductD(parent);
+            product = new CComponentButtonD(parent);
             break;
         case 'E':
-            product = new ConcreteProductE(parent);
+            product = new CComponentButtonE(parent);
             break;
 
         default:
@@ -165,12 +161,12 @@ public:
     }
 };
 
-class SBottomComponent : public QWidget
+class CBottomComponent : public QWidget
 {
     Q_OBJECT
 public:
-    explicit SBottomComponent(QWidget *parent = nullptr);
-    ~SBottomComponent();
+    explicit CBottomComponent(QWidget *parent = nullptr);
+    ~CBottomComponent();
     void attachToSubject(Subject *eSubj){
         mSubj = eSubj;
     }
@@ -187,12 +183,12 @@ public slots:
 signals:
     void sigUpdate();
 private:
-    SComponentA *span;
-    Product* productA;
-    Product* productB;
-    Product* productC;
-    Product* productD;
-    Product* productE;
+    CBaseComponent *span;
+    InterfaceProduct* productA;
+    InterfaceProduct* productB;
+    InterfaceProduct* productC;
+    InterfaceProduct* productD;
+    InterfaceProduct* productE;
 
     Subject *mSubj;
 };

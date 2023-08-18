@@ -47,11 +47,11 @@ private:
     int mTypeObj;
 };
 
-class SSpanComponent : public QWidget
+class CTrackItem : public QWidget
 {
     Q_OBJECT
 public:
-    explicit SSpanComponent(QWidget *parent = nullptr);
+    explicit CTrackItem(QWidget *parent = nullptr);
 
     void setId(int i);
     void setCurrentType(int eCurrentType){
