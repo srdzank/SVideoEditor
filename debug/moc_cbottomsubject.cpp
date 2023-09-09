@@ -7,7 +7,7 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../cbottomsubject.h"
+#include "../CollaborationHub/cbottomsubject.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
@@ -91,30 +91,30 @@ int Observer::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     _id = QWidget::qt_metacall(_c, _id, _a);
     return _id;
 }
-struct qt_meta_stringdata_ConcreteObserver_t {
+struct qt_meta_stringdata_CConcreteObserver_t {
     QByteArrayData data[5];
-    char stringdata0[47];
+    char stringdata0[48];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_ConcreteObserver_t, stringdata0) + ofs \
+    qptrdiff(offsetof(qt_meta_stringdata_CConcreteObserver_t, stringdata0) + ofs \
         - idx * sizeof(QByteArrayData)) \
     )
-static const qt_meta_stringdata_ConcreteObserver_t qt_meta_stringdata_ConcreteObserver = {
+static const qt_meta_stringdata_CConcreteObserver_t qt_meta_stringdata_CConcreteObserver = {
     {
-QT_MOC_LITERAL(0, 0, 16), // "ConcreteObserver"
-QT_MOC_LITERAL(1, 17, 10), // "someSignal"
-QT_MOC_LITERAL(2, 28, 0), // ""
-QT_MOC_LITERAL(3, 29, 4), // "data"
-QT_MOC_LITERAL(4, 34, 12) // "handleSignal"
+QT_MOC_LITERAL(0, 0, 17), // "CConcreteObserver"
+QT_MOC_LITERAL(1, 18, 10), // "someSignal"
+QT_MOC_LITERAL(2, 29, 0), // ""
+QT_MOC_LITERAL(3, 30, 4), // "data"
+QT_MOC_LITERAL(4, 35, 12) // "handleSignal"
 
     },
-    "ConcreteObserver\0someSignal\0\0data\0"
+    "CConcreteObserver\0someSignal\0\0data\0"
     "handleSignal"
 };
 #undef QT_MOC_LITERAL
 
-static const uint qt_meta_data_ConcreteObserver[] = {
+static const uint qt_meta_data_CConcreteObserver[] = {
 
  // content:
        8,       // revision
@@ -142,10 +142,10 @@ static const uint qt_meta_data_ConcreteObserver[] = {
        0        // eod
 };
 
-void ConcreteObserver::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void CConcreteObserver::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
-        auto *_t = static_cast<ConcreteObserver *>(_o);
+        auto *_t = static_cast<CConcreteObserver *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->someSignal((*reinterpret_cast< int(*)>(_a[1]))); break;
@@ -155,8 +155,8 @@ void ConcreteObserver::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
-            using _t = void (ConcreteObserver::*)(int );
-            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&ConcreteObserver::someSignal)) {
+            using _t = void (CConcreteObserver::*)(int );
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&CConcreteObserver::someSignal)) {
                 *result = 0;
                 return;
             }
@@ -164,30 +164,30 @@ void ConcreteObserver::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
     }
 }
 
-QT_INIT_METAOBJECT const QMetaObject ConcreteObserver::staticMetaObject = { {
+QT_INIT_METAOBJECT const QMetaObject CConcreteObserver::staticMetaObject = { {
     QMetaObject::SuperData::link<Observer::staticMetaObject>(),
-    qt_meta_stringdata_ConcreteObserver.data,
-    qt_meta_data_ConcreteObserver,
+    qt_meta_stringdata_CConcreteObserver.data,
+    qt_meta_data_CConcreteObserver,
     qt_static_metacall,
     nullptr,
     nullptr
 } };
 
 
-const QMetaObject *ConcreteObserver::metaObject() const
+const QMetaObject *CConcreteObserver::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *ConcreteObserver::qt_metacast(const char *_clname)
+void *CConcreteObserver::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_ConcreteObserver.stringdata0))
+    if (!strcmp(_clname, qt_meta_stringdata_CConcreteObserver.stringdata0))
         return static_cast<void*>(this);
     return Observer::qt_metacast(_clname);
 }
 
-int ConcreteObserver::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int CConcreteObserver::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = Observer::qt_metacall(_c, _id, _a);
     if (_id < 0)
@@ -205,7 +205,7 @@ int ConcreteObserver::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void ConcreteObserver::someSignal(int _t1)
+void CConcreteObserver::someSignal(int _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);

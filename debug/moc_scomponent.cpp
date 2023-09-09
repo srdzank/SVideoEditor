@@ -21,25 +21,25 @@
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
-struct qt_meta_stringdata_SComponent_t {
+struct qt_meta_stringdata_CMainComponent_t {
     QByteArrayData data[1];
-    char stringdata0[11];
+    char stringdata0[15];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_SComponent_t, stringdata0) + ofs \
+    qptrdiff(offsetof(qt_meta_stringdata_CMainComponent_t, stringdata0) + ofs \
         - idx * sizeof(QByteArrayData)) \
     )
-static const qt_meta_stringdata_SComponent_t qt_meta_stringdata_SComponent = {
+static const qt_meta_stringdata_CMainComponent_t qt_meta_stringdata_CMainComponent = {
     {
-QT_MOC_LITERAL(0, 0, 10) // "SComponent"
+QT_MOC_LITERAL(0, 0, 14) // "CMainComponent"
 
     },
-    "SComponent"
+    "CMainComponent"
 };
 #undef QT_MOC_LITERAL
 
-static const uint qt_meta_data_SComponent[] = {
+static const uint qt_meta_data_CMainComponent[] = {
 
  // content:
        8,       // revision
@@ -55,7 +55,7 @@ static const uint qt_meta_data_SComponent[] = {
        0        // eod
 };
 
-void SComponent::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void CMainComponent::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     Q_UNUSED(_o);
     Q_UNUSED(_id);
@@ -63,30 +63,30 @@ void SComponent::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
     Q_UNUSED(_a);
 }
 
-QT_INIT_METAOBJECT const QMetaObject SComponent::staticMetaObject = { {
+QT_INIT_METAOBJECT const QMetaObject CMainComponent::staticMetaObject = { {
     QMetaObject::SuperData::link<QWidget::staticMetaObject>(),
-    qt_meta_stringdata_SComponent.data,
-    qt_meta_data_SComponent,
+    qt_meta_stringdata_CMainComponent.data,
+    qt_meta_data_CMainComponent,
     qt_static_metacall,
     nullptr,
     nullptr
 } };
 
 
-const QMetaObject *SComponent::metaObject() const
+const QMetaObject *CMainComponent::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *SComponent::qt_metacast(const char *_clname)
+void *CMainComponent::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_SComponent.stringdata0))
+    if (!strcmp(_clname, qt_meta_stringdata_CMainComponent.stringdata0))
         return static_cast<void*>(this);
     return QWidget::qt_metacast(_clname);
 }
 
-int SComponent::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int CMainComponent::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QWidget::qt_metacall(_c, _id, _a);
     return _id;

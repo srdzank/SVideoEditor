@@ -76,5 +76,29 @@ private:
 };
 
 
+class CTransparentWidget  : public QWidget
+{
+    Q_OBJECT
+public:
+    explicit CTransparentWidget(QWidget *parent = nullptr);
+    void setPos(float pos);
+protected:
+    void paintEvent(QPaintEvent* event) override;
+private:
+    float mpos;
+};
+
+
+class CTimeLineWidget  : public QWidget
+{
+    Q_OBJECT
+public:
+    explicit CTimeLineWidget(QWidget *parent = nullptr);
+
+protected:
+    void paintEvent(QPaintEvent* event) override;
+private:
+};
+
 
 #endif // SSPANCOMPONENT_H

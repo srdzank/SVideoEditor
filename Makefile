@@ -294,11 +294,13 @@ Makefile: SVideoEditor.pro D:\Qt\5.15.2\msvc2019_64\mkspecs\win32-msvc\qmake.con
 		SVideoEditor.pro \
 		D:\Qt\5.15.2\msvc2019_64\lib\Qt5Widgets.prl \
 		D:\Qt\5.15.2\msvc2019_64\lib\Qt5Gui.prl \
+		D:\Qt\5.15.2\msvc2019_64\lib\Qt5Xml.prl \
 		D:\Qt\5.15.2\msvc2019_64\lib\Qt5Core.prl \
 		D:\Qt\5.15.2\msvc2019_64\lib\qtmain.prl \
 		D:\Qt\5.15.2\msvc2019_64\mkspecs\features\build_pass.prf \
 		D:\Qt\5.15.2\msvc2019_64\lib\Qt5Widgetsd.prl \
 		D:\Qt\5.15.2\msvc2019_64\lib\Qt5Guid.prl \
+		D:\Qt\5.15.2\msvc2019_64\lib\Qt5Xmld.prl \
 		D:\Qt\5.15.2\msvc2019_64\lib\Qt5Cored.prl \
 		D:\Qt\5.15.2\msvc2019_64\lib\qtmaind.prl
 	$(QMAKE) -o Makefile SVideoEditor.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug"
@@ -512,11 +514,13 @@ D:\Qt\5.15.2\msvc2019_64\mkspecs\features\lex.prf:
 SVideoEditor.pro:
 D:\Qt\5.15.2\msvc2019_64\lib\Qt5Widgets.prl:
 D:\Qt\5.15.2\msvc2019_64\lib\Qt5Gui.prl:
+D:\Qt\5.15.2\msvc2019_64\lib\Qt5Xml.prl:
 D:\Qt\5.15.2\msvc2019_64\lib\Qt5Core.prl:
 D:\Qt\5.15.2\msvc2019_64\lib\qtmain.prl:
 D:\Qt\5.15.2\msvc2019_64\mkspecs\features\build_pass.prf:
 D:\Qt\5.15.2\msvc2019_64\lib\Qt5Widgetsd.prl:
 D:\Qt\5.15.2\msvc2019_64\lib\Qt5Guid.prl:
+D:\Qt\5.15.2\msvc2019_64\lib\Qt5Xmld.prl:
 D:\Qt\5.15.2\msvc2019_64\lib\Qt5Cored.prl:
 D:\Qt\5.15.2\msvc2019_64\lib\qtmaind.prl:
 qmake: FORCE

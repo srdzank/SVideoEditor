@@ -185,3 +185,49 @@ int CTrackItem::getTrackObjectByFrameID(int id) const {
     }
     return idx;
 }
+
+
+CTransparentWidget::CTransparentWidget(QWidget *parent) : QWidget(parent)
+{
+    setAttribute(Qt::WA_TransparentForMouseEvents);
+    setAttribute(Qt::WA_TranslucentBackground);
+    mpos = 20;
+}
+
+void CTransparentWidget::setPos(float pos){
+    mpos = pos;
+}
+
+void CTransparentWidget::paintEvent(QPaintEvent* event)
+{
+    QPainter painter(this);
+
+    // Set a translucent background color
+    painter.setRenderHint(QPainter::Antialiasing);
+    QColor bgColor = QColor(0, 0, 0, 20); // R, G, B, Alpha (0-255)
+    painter.fillRect(rect(), bgColor);
+
+    // Draw a red vertical line
+    painter.setPen(Qt::red);
+    int centerX = mpos * (float)width() / 100.0f;
+    painter.drawLine(centerX, 0, centerX, height());
+
+    //QWidget::paintEvent(event);
+}
+
+
+CTimeLineWidget::CTimeLineWidget(QWidget *parent) : QWidget(parent)
+{
+}
+
+void CTimeLineWidget::paintEvent(QPaintEvent* event)
+{
+    QPainter painter(this);
+
+
+    // Draw a red vertical line
+    QColor bgColor = QColor(255, 0, 0, 20); // R, G, B, Alpha (0-255)
+    painter.fillRect(rect(), bgColor);
+
+    //QWidget::paintEvent(event);
+}

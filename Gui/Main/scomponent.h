@@ -6,11 +6,11 @@
 #include <QWidget>
 #include <QPainter>
 
-class SComponent : public QWidget
+class CMainComponent : public QWidget
 {
     Q_OBJECT
 public:
-    explicit SComponent(QWidget *parent = nullptr);
+    explicit CMainComponent(QWidget *parent = nullptr);
 
 protected:
     void closeEvent(QCloseEvent* event) override;

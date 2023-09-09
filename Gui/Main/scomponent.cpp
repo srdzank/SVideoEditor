@@ -1,13 +1,13 @@
 
 #include "scomponent.h"
 
-SComponent::SComponent(QWidget *parent)
+CMainComponent::CMainComponent(QWidget *parent)
     : QWidget{parent}
 {
 
 }
 
-void SComponent::closeEvent(QCloseEvent* event){
+void CMainComponent::closeEvent(QCloseEvent* event){
     // Handle close event
     // ...
 
@@ -15,7 +15,7 @@ void SComponent::closeEvent(QCloseEvent* event){
     QWidget::closeEvent(event);
 }
 
-void SComponent::keyPressEvent(QKeyEvent* event){
+void CMainComponent::keyPressEvent(QKeyEvent* event){
     // Handle key press event
     // ...
 
@@ -23,7 +23,7 @@ void SComponent::keyPressEvent(QKeyEvent* event){
     QWidget::keyPressEvent(event);
 }
 
-void SComponent::mousePressEvent(QMouseEvent* event){
+void CMainComponent::mousePressEvent(QMouseEvent* event){
     // Handle mouse press event
     // ...
 
@@ -31,7 +31,7 @@ void SComponent::mousePressEvent(QMouseEvent* event){
     QWidget::mousePressEvent(event);
 }
 
-void SComponent::paintEvent(QPaintEvent* event){
+void CMainComponent::paintEvent(QPaintEvent* event){
     // Perform custom drawing here
     QPainter painter(this);
 

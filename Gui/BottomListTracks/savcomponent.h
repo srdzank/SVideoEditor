@@ -13,8 +13,10 @@
 #include <QPainter>
 #include <QStyleOptionViewItem>
 #include "sspancomponent.h"
-#include "cbottomsubject.h"
+#include "CollaborationHub/cbottomsubject.h"
 #include "cframeclass.h"
+#include <QThread>
+#include <QTimer>
 
 class CCustomItemDelegate : public QStyledItemDelegate {
 public:
@@ -55,8 +57,8 @@ class CAudioVideoComponent : public QWidget {
 public:
     CAudioVideoComponent(QWidget *parent = nullptr);
     ~CAudioVideoComponent();
-
-    void attachToObserver(ConcreteObserver * eObser);
+    void Init();
+    void attachToObserver(CConcreteObserver * eObser);
     CFrameClass getFrameByID(int idFrame);
 public slots:
     void handleSignal(int data);
@@ -73,8 +75,11 @@ private:
     CCustomItemDelegate* itemDelegate;
     QVector<QListWidgetItem*> listOfWidgetItem;
     QVector<CTrackItem*> listOfTracks;
-    ConcreteObserver * mObser;
+    CConcreteObserver * mObser;
     int currentType;
+    CTransparentWidget *transWidg;
+    QTimer shotTimer;
+    float playPosition;
 };
 
 #endif // SAVCOMPONENT_H

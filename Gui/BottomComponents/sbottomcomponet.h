@@ -8,7 +8,7 @@
 #include "component_item.h"
 #include <vector>
 #include <iostream>
-#include "cbottomsubject.h"
+#include "CollaborationHub/cbottomsubject.h"
 
 using namespace std;
 
@@ -167,7 +167,7 @@ class CBottomComponent : public QWidget
 public:
     explicit CBottomComponent(QWidget *parent = nullptr);
     ~CBottomComponent();
-    void attachToSubject(Subject *eSubj){
+    void attachToSubject(CSubject *eSubj){
         mSubj = eSubj;
     }
 
@@ -190,7 +190,7 @@ private:
     InterfaceProduct* productD;
     InterfaceProduct* productE;
 
-    Subject *mSubj;
+    CSubject *mSubj;
 };
 
 #endif // SBOTTOMCOMPONET_H

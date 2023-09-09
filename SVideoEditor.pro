@@ -1,6 +1,6 @@
 QT       += core gui
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets xml
 
 CONFIG += c++17
 
@@ -14,7 +14,9 @@ SOURCES += \
     Gui/BottomListTracks/savcomponent.cpp \
     Gui/BottomListTracks/sspancomponent.cpp \
     Gui/Main/scomponent.cpp \
-    cbottomsubject.cpp \
+    XML/ccustomxml.cpp \
+    XML/cxmlhelper.cpp \
+    CollaborationHub/cbottomsubject.cpp \
     cframeclass.cpp \
     main.cpp \
     mainwindow.cpp
@@ -25,7 +27,9 @@ HEADERS += \
     Gui/BottomListTracks/savcomponent.h \
     Gui/BottomListTracks/sspancomponent.h \
     Gui/Main/scomponent.h \
-    cbottomsubject.h \
+    XML/ccustomxml.h \
+    XML/cxmlhelper.h \
+    CollaborationHub/cbottomsubject.h \
     cframeclass.h \
     mainwindow.h
 

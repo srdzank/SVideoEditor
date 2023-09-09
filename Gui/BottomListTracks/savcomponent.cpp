@@ -47,21 +47,43 @@ CAudioVideoComponent::CAudioVideoComponent(QWidget *parent)
     buttonLayout->addWidget(trackInput);
     scrollLayout->addWidget(trackList);
 
-
+    QHBoxLayout *timelineLayout = new QHBoxLayout;
+    CTimeLineWidget *timeLineWidget = new CTimeLineWidget();
+    timelineLayout->addWidget(timeLineWidget);
     // Set the scroll area widget as the content widget of the scroll area
     scrollArea->setWidget(scrollContent);
 
     // Create a layout to organize the scroll area
     QVBoxLayout *layout = new QVBoxLayout(this);
     layout->addLayout(buttonLayout);
+    layout->addLayout(timelineLayout);
     layout->addWidget(scrollArea);
+
+    transWidg = new CTransparentWidget(this);
+
+    //Timet every 25 milliseconds
+    shotTimer.setInterval(20);
+    playPosition = 0;
+    QObject::connect(&shotTimer, &QTimer::timeout, [&]() {
+        // Code to be executed when the timer times out
+        transWidg->setPos(playPosition);
+        transWidg->repaint();
+        playPosition =  playPosition <= 100 ? playPosition += 0.1: playPosition = 0;
+    });
 }
 
 CAudioVideoComponent::~CAudioVideoComponent(){
+    delete transWidg ;
 }
 
+void CAudioVideoComponent::Init(){
+    layout()->geometry();
+    //transWidg->setGeometry(0,0, width(), height());
+    transWidg->setGeometry(layout()->geometry());
+    transWidg->show();
+}
 
-void CAudioVideoComponent::attachToObserver(ConcreteObserver * eObser){
+void CAudioVideoComponent::attachToObserver(CConcreteObserver * eObser){
     mObser = eObser;
     connect(mObser, SIGNAL(someSignal(int)), this, SLOT(handleSignal(int)));
 }
@@ -125,11 +147,7 @@ void CAudioVideoComponent::deleteTrack() {
 
 
 void CAudioVideoComponent::playTrack() {
-    for (int i= 0; i < 2000; i+=50){
-    CFrameClass item = getFrameByID(i);
-        int stop = 0;
-    }
-
+    shotTimer.start();
 }
 
 void CAudioVideoComponent::paintEvent(QPaintEvent* event){
