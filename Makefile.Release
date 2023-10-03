@@ -689,6 +689,9 @@ release\moc_savcomponent.cpp: Gui\BottomListTracks\savcomponent.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qthread.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qdeadlinetimer.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qelapsedtimer.h \
+		D:\Qt\5.15.2\msvc2019_64\include\QtCore\QTimer \
+		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qtimer.h \
+		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qbasictimer.h \
 		release\moc_predefs.h \
 		D:\Qt\5.15.2\msvc2019_64\bin\moc.exe
 	D:\Qt\5.15.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/User/Desktop/SVideoEditor/release/moc_predefs.h -ID:/Qt/5.15.2/msvc2019_64/mkspecs/win32-msvc -IC:/Users/User/Desktop/SVideoEditor -ID:/Qt/5.15.2/msvc2019_64/include -ID:/Qt/5.15.2/msvc2019_64/include/QtWidgets -ID:/Qt/5.15.2/msvc2019_64/include/QtGui -ID:/Qt/5.15.2/msvc2019_64/include/QtANGLE -ID:/Qt/5.15.2/msvc2019_64/include/QtXml -ID:/Qt/5.15.2/msvc2019_64/include/QtCore -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\ATLMFC\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\um" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\shared" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\winrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\cppwinrt" Gui\BottomListTracks\savcomponent.h -o release\moc_savcomponent.cpp
@@ -1431,6 +1434,9 @@ release\moc_mainwindow.cpp: mainwindow.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qthread.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qdeadlinetimer.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qelapsedtimer.h \
+		D:\Qt\5.15.2\msvc2019_64\include\QtCore\QTimer \
+		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qtimer.h \
+		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qbasictimer.h \
 		XML\ccustomxml.h \
 		XML\cxmlhelper.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtXml\QtXml \
@@ -1447,7 +1453,6 @@ release\moc_mainwindow.cpp: mainwindow.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qanimationgroup.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qarraydataops.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qarraydatapointer.h \
-		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qbasictimer.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qbitarray.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qbuffer.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qbytearraymatcher.h \
@@ -1546,7 +1551,6 @@ release\moc_mainwindow.cpp: mainwindow.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qthreadpool.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qthreadstorage.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qtimeline.h \
-		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qtimer.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qtimezone.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qtranslator.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qtransposeproxymodel.h \
@@ -1965,7 +1969,10 @@ release\savcomponent.obj: Gui\BottomListTracks\savcomponent.cpp Gui\BottomListTr
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\QThread \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qthread.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qdeadlinetimer.h \
-		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qelapsedtimer.h
+		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qelapsedtimer.h \
+		D:\Qt\5.15.2\msvc2019_64\include\QtCore\QTimer \
+		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qtimer.h \
+		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qbasictimer.h
 
 release\sspancomponent.obj: Gui\BottomListTracks\sspancomponent.cpp Gui\BottomListTracks\sspancomponent.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtWidgets\QWidget \
@@ -2904,6 +2911,9 @@ release\main.obj: main.cpp mainwindow.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qthread.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qdeadlinetimer.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qelapsedtimer.h \
+		D:\Qt\5.15.2\msvc2019_64\include\QtCore\QTimer \
+		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qtimer.h \
+		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qbasictimer.h \
 		XML\ccustomxml.h \
 		XML\cxmlhelper.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtXml\QtXml \
@@ -2920,7 +2930,6 @@ release\main.obj: main.cpp mainwindow.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qanimationgroup.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qarraydataops.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qarraydatapointer.h \
-		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qbasictimer.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qbitarray.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qbuffer.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qbytearraymatcher.h \
@@ -3019,7 +3028,6 @@ release\main.obj: main.cpp mainwindow.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qthreadpool.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qthreadstorage.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qtimeline.h \
-		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qtimer.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qtimezone.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qtranslator.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qtransposeproxymodel.h \
@@ -3202,6 +3210,9 @@ release\mainwindow.obj: mainwindow.cpp mainwindow.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qthread.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qdeadlinetimer.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qelapsedtimer.h \
+		D:\Qt\5.15.2\msvc2019_64\include\QtCore\QTimer \
+		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qtimer.h \
+		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qbasictimer.h \
 		XML\ccustomxml.h \
 		XML\cxmlhelper.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtXml\QtXml \
@@ -3218,7 +3229,6 @@ release\mainwindow.obj: mainwindow.cpp mainwindow.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qanimationgroup.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qarraydataops.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qarraydatapointer.h \
-		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qbasictimer.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qbitarray.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qbuffer.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qbytearraymatcher.h \
@@ -3317,7 +3327,6 @@ release\mainwindow.obj: mainwindow.cpp mainwindow.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qthreadpool.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qthreadstorage.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qtimeline.h \
-		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qtimer.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qtimezone.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qtranslator.h \
 		D:\Qt\5.15.2\msvc2019_64\include\QtCore\qtransposeproxymodel.h \

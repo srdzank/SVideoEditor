@@ -59,7 +59,7 @@ CAudioVideoComponent::CAudioVideoComponent(QWidget *parent)
     layout->addLayout(timelineLayout);
     layout->addWidget(scrollArea);
 
-    transWidg = new CTransparentWidget(this);
+    transWidg = new CTransparentWidget(scrollContent);
 
     //Timet every 25 milliseconds
     shotTimer.setInterval(20);
@@ -117,7 +117,6 @@ void CAudioVideoComponent::addTrack() {
     listOfTracks.push_back(sobject);
     trackInput->clear();
     trackList->show();
-
 }
 
 
@@ -147,7 +146,10 @@ void CAudioVideoComponent::deleteTrack() {
 
 
 void CAudioVideoComponent::playTrack() {
-    shotTimer.start();
+    if(shotTimer.isActive())
+        shotTimer.stop();
+    else
+        shotTimer.start();
 }
 
 void CAudioVideoComponent::paintEvent(QPaintEvent* event){

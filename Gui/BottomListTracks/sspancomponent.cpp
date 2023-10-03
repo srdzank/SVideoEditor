@@ -76,7 +76,7 @@ void CTrackItem::mousePressEvent(QMouseEvent* event)
 
             // Check if the resize handle is clicked
             int resizeHandleX1 = objectRect.left();
-            //int resizeHandleWidth = 10; // Adjust this value as needed
+            // int resizeHandleWidth = 10; // Adjust this value as needed
             QRect resizeHandleRect1(resizeHandleX1, 0, resizeHandleWidth, height());
             if (resizeHandleRect1.contains(mousePos))
             {
