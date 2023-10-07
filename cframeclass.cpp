@@ -1,8 +1,5 @@
-
 #include "cframeclass.h"
 
-CFrameClass::CFrameClass()
-{
-
+CFrameClass::CFrameClass(){
 }
 

@@ -2,9 +2,7 @@
 #include "savcomponent.h"
 
 
-CAudioVideoComponent::CAudioVideoComponent(QWidget *parent)
-    : QWidget(parent)
-{
+CAudioVideoComponent::CAudioVideoComponent(QWidget *parent):QWidget(parent){
     // Create a scroll area
     QScrollArea *scrollArea = new QScrollArea(this);
     scrollArea->setWidgetResizable(true);
@@ -18,7 +16,6 @@ CAudioVideoComponent::CAudioVideoComponent(QWidget *parent)
     itemDelegate = new CCustomItemDelegate();
     trackList->setItemDelegate(itemDelegate);
 
-
     QHBoxLayout *buttonLayout = new QHBoxLayout;
 
     // Create a line edit widget for entering track information
@@ -30,7 +27,6 @@ CAudioVideoComponent::CAudioVideoComponent(QWidget *parent)
     // Connect the "Add Track" button to add a track to the list
     connect(addButton, &QPushButton::clicked, this, &CAudioVideoComponent::addTrack);
 
-
     // Create a button for deleting tracks
     QPushButton *deleteButton = new QPushButton("Delete Track");
     connect(deleteButton, &QPushButton::clicked, this, &CAudioVideoComponent::deleteTrack);
@@ -38,7 +34,6 @@ CAudioVideoComponent::CAudioVideoComponent(QWidget *parent)
     // Create a button for deleting tracks
     QPushButton *playButton = new QPushButton("Play Track");
     connect(playButton, &QPushButton::clicked, this, &CAudioVideoComponent::playTrack);
-
 
     // Add the list widget, input field, and button to the scroll area widget
     buttonLayout->addWidget(addButton);
@@ -89,16 +84,14 @@ void CAudioVideoComponent::attachToObserver(CConcreteObserver * eObser){
 }
 void CAudioVideoComponent::handleSignal(int data){
     currentType = data;
-    for (int i = 0; i < listOfTracks.size(); i++)
-    {
+    for (int i = 0; i < listOfTracks.size(); i++){
         listOfTracks.at(i)->setCurrentType(data);
     }
 }
 
 CFrameClass CAudioVideoComponent::getFrameByID(int idFrame){
     CFrameClass frame;
-    for (int i = 0; i < listOfTracks.size(); i++)
-    {
+    for (int i = 0; i < listOfTracks.size(); i++){
         frame.Id = i;
         int idBlock = listOfTracks.at(i)->getTrackObjectByFrameID(idFrame);
         frame.listOfObj.push_back(idBlock);

@@ -1,0 +1,210 @@
+\doxysection{ui\+\_\+mainwindow.\+h}
+\hypertarget{ui__mainwindow_8h_source}{}\label{ui__mainwindow_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ Form\ generated\ from\ reading\ UI\ file\ 'mainwindow.ui'}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ Created\ by:\ Qt\ User\ Interface\ Compiler\ version\ 5.15.2}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**}}
+\DoxyCodeLine{00006\ \textcolor{comment}{**\ WARNING!\ All\ changes\ made\ in\ this\ file\ will\ be\ lost\ when\ recompiling\ UI\ file!}}
+\DoxyCodeLine{00007\ \textcolor{comment}{********************************************************************************/}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ UI\_MAINWINDOW\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ UI\_MAINWINDOW\_H}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QtCore/QVariant>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QtWidgets/QAction>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QtWidgets/QApplication>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QtWidgets/QMainWindow>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <QtWidgets/QMenu>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <QtWidgets/QMenuBar>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <QtWidgets/QStatusBar>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <QtWidgets/QWidget>}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ui___main_window}{Ui\_MainWindow}}}
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ QAction\ *actionOpen;}
+\DoxyCodeLine{00027\ \ \ \ \ QAction\ *actionNew\_File;}
+\DoxyCodeLine{00028\ \ \ \ \ QAction\ *actionSave;}
+\DoxyCodeLine{00029\ \ \ \ \ QAction\ *actionSave\_as;}
+\DoxyCodeLine{00030\ \ \ \ \ QAction\ *actionSend\_File;}
+\DoxyCodeLine{00031\ \ \ \ \ QAction\ *actionRevert;}
+\DoxyCodeLine{00032\ \ \ \ \ QAction\ *actionClose;}
+\DoxyCodeLine{00033\ \ \ \ \ QAction\ *actionProperties;}
+\DoxyCodeLine{00034\ \ \ \ \ QAction\ *actionPrint;}
+\DoxyCodeLine{00035\ \ \ \ \ QAction\ *actionView\_all\_recent\_files;}
+\DoxyCodeLine{00036\ \ \ \ \ QAction\ *actionUndo;}
+\DoxyCodeLine{00037\ \ \ \ \ QAction\ *actionRedo;}
+\DoxyCodeLine{00038\ \ \ \ \ QAction\ *actionCut;}
+\DoxyCodeLine{00039\ \ \ \ \ QAction\ *actionCopy;}
+\DoxyCodeLine{00040\ \ \ \ \ QAction\ *actionPaste;}
+\DoxyCodeLine{00041\ \ \ \ \ QAction\ *actionRemove;}
+\DoxyCodeLine{00042\ \ \ \ \ QAction\ *actionDelete;}
+\DoxyCodeLine{00043\ \ \ \ \ QAction\ *actionSelect\_All;}
+\DoxyCodeLine{00044\ \ \ \ \ QAction\ *actionAdvance;}
+\DoxyCodeLine{00045\ \ \ \ \ QWidget\ *centralwidget;}
+\DoxyCodeLine{00046\ \ \ \ \ QMenuBar\ *menubar;}
+\DoxyCodeLine{00047\ \ \ \ \ QMenu\ *menuFile;}
+\DoxyCodeLine{00048\ \ \ \ \ QMenu\ *menuEdit;}
+\DoxyCodeLine{00049\ \ \ \ \ QMenu\ *menuView;}
+\DoxyCodeLine{00050\ \ \ \ \ QMenu\ *menuInsert;}
+\DoxyCodeLine{00051\ \ \ \ \ QMenu\ *menuTools;}
+\DoxyCodeLine{00052\ \ \ \ \ QMenu\ *menuOptions;}
+\DoxyCodeLine{00053\ \ \ \ \ QMenu\ *menuHelp;}
+\DoxyCodeLine{00054\ \ \ \ \ QStatusBar\ *statusbar;}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ setupUi(QMainWindow\ *\mbox{\hyperlink{class_main_window}{MainWindow}})}
+\DoxyCodeLine{00057\ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_main_window}{MainWindow}}-\/>objectName().isEmpty())}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window}{MainWindow}}-\/>setObjectName(QString::fromUtf8(\textcolor{stringliteral}{"{}MainWindow"{}}));}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window}{MainWindow}}-\/>resize(800,\ 600);}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ actionOpen\ =\ \textcolor{keyword}{new}\ QAction(\mbox{\hyperlink{class_main_window}{MainWindow}});}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ actionOpen-\/>setObjectName(QString::fromUtf8(\textcolor{stringliteral}{"{}actionOpen"{}}));}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ actionNew\_File\ =\ \textcolor{keyword}{new}\ QAction(\mbox{\hyperlink{class_main_window}{MainWindow}});}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ actionNew\_File-\/>setObjectName(QString::fromUtf8(\textcolor{stringliteral}{"{}actionNew\_File"{}}));}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ actionSave\ =\ \textcolor{keyword}{new}\ QAction(\mbox{\hyperlink{class_main_window}{MainWindow}});}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ actionSave-\/>setObjectName(QString::fromUtf8(\textcolor{stringliteral}{"{}actionSave"{}}));}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ actionSave\_as\ =\ \textcolor{keyword}{new}\ QAction(\mbox{\hyperlink{class_main_window}{MainWindow}});}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ actionSave\_as-\/>setObjectName(QString::fromUtf8(\textcolor{stringliteral}{"{}actionSave\_as"{}}));}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ actionSend\_File\ =\ \textcolor{keyword}{new}\ QAction(\mbox{\hyperlink{class_main_window}{MainWindow}});}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ actionSend\_File-\/>setObjectName(QString::fromUtf8(\textcolor{stringliteral}{"{}actionSend\_File"{}}));}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ actionRevert\ =\ \textcolor{keyword}{new}\ QAction(\mbox{\hyperlink{class_main_window}{MainWindow}});}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ actionRevert-\/>setObjectName(QString::fromUtf8(\textcolor{stringliteral}{"{}actionRevert"{}}));}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ actionClose\ =\ \textcolor{keyword}{new}\ QAction(\mbox{\hyperlink{class_main_window}{MainWindow}});}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ actionClose-\/>setObjectName(QString::fromUtf8(\textcolor{stringliteral}{"{}actionClose"{}}));}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ actionProperties\ =\ \textcolor{keyword}{new}\ QAction(\mbox{\hyperlink{class_main_window}{MainWindow}});}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ actionProperties-\/>setObjectName(QString::fromUtf8(\textcolor{stringliteral}{"{}actionProperties"{}}));}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ actionPrint\ =\ \textcolor{keyword}{new}\ QAction(\mbox{\hyperlink{class_main_window}{MainWindow}});}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ actionPrint-\/>setObjectName(QString::fromUtf8(\textcolor{stringliteral}{"{}actionPrint"{}}));}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ actionView\_all\_recent\_files\ =\ \textcolor{keyword}{new}\ QAction(\mbox{\hyperlink{class_main_window}{MainWindow}});}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ actionView\_all\_recent\_files-\/>setObjectName(QString::fromUtf8(\textcolor{stringliteral}{"{}actionView\_all\_recent\_files"{}}));}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ actionUndo\ =\ \textcolor{keyword}{new}\ QAction(\mbox{\hyperlink{class_main_window}{MainWindow}});}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ actionUndo-\/>setObjectName(QString::fromUtf8(\textcolor{stringliteral}{"{}actionUndo"{}}));}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ actionRedo\ =\ \textcolor{keyword}{new}\ QAction(\mbox{\hyperlink{class_main_window}{MainWindow}});}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ actionRedo-\/>setObjectName(QString::fromUtf8(\textcolor{stringliteral}{"{}actionRedo"{}}));}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ actionCut\ =\ \textcolor{keyword}{new}\ QAction(\mbox{\hyperlink{class_main_window}{MainWindow}});}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ actionCut-\/>setObjectName(QString::fromUtf8(\textcolor{stringliteral}{"{}actionCut"{}}));}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ actionCopy\ =\ \textcolor{keyword}{new}\ QAction(\mbox{\hyperlink{class_main_window}{MainWindow}});}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ actionCopy-\/>setObjectName(QString::fromUtf8(\textcolor{stringliteral}{"{}actionCopy"{}}));}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ actionPaste\ =\ \textcolor{keyword}{new}\ QAction(\mbox{\hyperlink{class_main_window}{MainWindow}});}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ actionPaste-\/>setObjectName(QString::fromUtf8(\textcolor{stringliteral}{"{}actionPaste"{}}));}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ actionRemove\ =\ \textcolor{keyword}{new}\ QAction(\mbox{\hyperlink{class_main_window}{MainWindow}});}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ actionRemove-\/>setObjectName(QString::fromUtf8(\textcolor{stringliteral}{"{}actionRemove"{}}));}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ actionDelete\ =\ \textcolor{keyword}{new}\ QAction(\mbox{\hyperlink{class_main_window}{MainWindow}});}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ actionDelete-\/>setObjectName(QString::fromUtf8(\textcolor{stringliteral}{"{}actionDelete"{}}));}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ actionSelect\_All\ =\ \textcolor{keyword}{new}\ QAction(\mbox{\hyperlink{class_main_window}{MainWindow}});}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ actionSelect\_All-\/>setObjectName(QString::fromUtf8(\textcolor{stringliteral}{"{}actionSelect\_All"{}}));}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ actionAdvance\ =\ \textcolor{keyword}{new}\ QAction(\mbox{\hyperlink{class_main_window}{MainWindow}});}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ actionAdvance-\/>setObjectName(QString::fromUtf8(\textcolor{stringliteral}{"{}actionAdvance"{}}));}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ centralwidget\ =\ \textcolor{keyword}{new}\ QWidget(\mbox{\hyperlink{class_main_window}{MainWindow}});}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ centralwidget-\/>setObjectName(QString::fromUtf8(\textcolor{stringliteral}{"{}centralwidget"{}}));}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window}{MainWindow}}-\/>setCentralWidget(centralwidget);}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ menubar\ =\ \textcolor{keyword}{new}\ QMenuBar(\mbox{\hyperlink{class_main_window}{MainWindow}});}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ menubar-\/>setObjectName(QString::fromUtf8(\textcolor{stringliteral}{"{}menubar"{}}));}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ menubar-\/>setGeometry(QRect(0,\ 0,\ 800,\ 25));}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ menuFile\ =\ \textcolor{keyword}{new}\ QMenu(menubar);}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ menuFile-\/>setObjectName(QString::fromUtf8(\textcolor{stringliteral}{"{}menuFile"{}}));}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ menuEdit\ =\ \textcolor{keyword}{new}\ QMenu(menubar);}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ menuEdit-\/>setObjectName(QString::fromUtf8(\textcolor{stringliteral}{"{}menuEdit"{}}));}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ menuView\ =\ \textcolor{keyword}{new}\ QMenu(menubar);}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ menuView-\/>setObjectName(QString::fromUtf8(\textcolor{stringliteral}{"{}menuView"{}}));}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ menuInsert\ =\ \textcolor{keyword}{new}\ QMenu(menubar);}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ menuInsert-\/>setObjectName(QString::fromUtf8(\textcolor{stringliteral}{"{}menuInsert"{}}));}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ menuTools\ =\ \textcolor{keyword}{new}\ QMenu(menubar);}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ menuTools-\/>setObjectName(QString::fromUtf8(\textcolor{stringliteral}{"{}menuTools"{}}));}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ menuOptions\ =\ \textcolor{keyword}{new}\ QMenu(menubar);}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ menuOptions-\/>setObjectName(QString::fromUtf8(\textcolor{stringliteral}{"{}menuOptions"{}}));}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ menuHelp\ =\ \textcolor{keyword}{new}\ QMenu(menubar);}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ menuHelp-\/>setObjectName(QString::fromUtf8(\textcolor{stringliteral}{"{}menuHelp"{}}));}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window}{MainWindow}}-\/>setMenuBar(menubar);}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ statusbar\ =\ \textcolor{keyword}{new}\ QStatusBar(\mbox{\hyperlink{class_main_window}{MainWindow}});}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ statusbar-\/>setObjectName(QString::fromUtf8(\textcolor{stringliteral}{"{}statusbar"{}}));}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window}{MainWindow}}-\/>setStatusBar(statusbar);}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ menubar-\/>addAction(menuFile-\/>menuAction());}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ menubar-\/>addAction(menuEdit-\/>menuAction());}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ menubar-\/>addAction(menuView-\/>menuAction());}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ menubar-\/>addAction(menuInsert-\/>menuAction());}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ menubar-\/>addAction(menuTools-\/>menuAction());}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ menubar-\/>addAction(menuOptions-\/>menuAction());}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ menubar-\/>addAction(menuHelp-\/>menuAction());}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ menuFile-\/>addAction(actionOpen);}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ menuFile-\/>addAction(actionNew\_File);}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ menuFile-\/>addSeparator();}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ menuFile-\/>addAction(actionSave);}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ menuFile-\/>addAction(actionSave\_as);}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ menuFile-\/>addSeparator();}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ menuFile-\/>addAction(actionSend\_File);}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ menuFile-\/>addSeparator();}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ menuFile-\/>addAction(actionRevert);}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ menuFile-\/>addAction(actionClose);}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ menuFile-\/>addSeparator();}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ menuFile-\/>addAction(actionProperties);}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ menuFile-\/>addAction(actionPrint);}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ menuFile-\/>addAction(actionView\_all\_recent\_files);}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ menuEdit-\/>addAction(actionUndo);}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ menuEdit-\/>addAction(actionRedo);}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ menuEdit-\/>addSeparator();}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ menuEdit-\/>addAction(actionCut);}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ menuEdit-\/>addAction(actionCopy);}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ menuEdit-\/>addAction(actionPaste);}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ menuEdit-\/>addAction(actionRemove);}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ menuEdit-\/>addAction(actionDelete);}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ menuEdit-\/>addSeparator();}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ menuEdit-\/>addAction(actionSelect\_All);}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ menuEdit-\/>addSeparator();}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ menuEdit-\/>addAction(actionAdvance);}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ retranslateUi(\mbox{\hyperlink{class_main_window}{MainWindow}});}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ QMetaObject::connectSlotsByName(\mbox{\hyperlink{class_main_window}{MainWindow}});}
+\DoxyCodeLine{00161\ \ \ \ \ \}\ \textcolor{comment}{//\ setupUi}}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordtype}{void}\ retranslateUi(QMainWindow\ *\mbox{\hyperlink{class_main_window}{MainWindow}})}
+\DoxyCodeLine{00164\ \ \ \ \ \{}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window}{MainWindow}}-\/>setWindowTitle(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ actionOpen-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Open"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00167\ \textcolor{preprocessor}{\#if\ QT\_CONFIG(shortcut)}}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ actionOpen-\/>setShortcut(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Ctrl+O"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00169\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ QT\_CONFIG(shortcut)}}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ actionNew\_File-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}New\ File"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ actionSave-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Save"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ actionSave\_as-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Save\ as"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ actionSend\_File-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Send\ File"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ actionRevert-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Revert"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ actionClose-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Close"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ actionProperties-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Properties"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ actionPrint-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Print"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ actionView\_all\_recent\_files-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}View\ all\ recent\ files"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ actionUndo-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Undo"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ actionRedo-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Redo"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ actionCut-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Cut"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ actionCopy-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Copy"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ actionPaste-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Paste"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ actionRemove-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Remove"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ actionDelete-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Delete"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ actionSelect\_All-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Select\ All"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ actionAdvance-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Advance"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ menuFile-\/>setTitle(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}File"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ menuEdit-\/>setTitle(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Edit"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ menuView-\/>setTitle(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}View"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ menuInsert-\/>setTitle(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Insert"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ menuTools-\/>setTitle(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Tools"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ menuOptions-\/>setTitle(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Options"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ menuHelp-\/>setTitle(QCoreApplication::translate(\textcolor{stringliteral}{"{}MainWindow"{}},\ \textcolor{stringliteral}{"{}Help"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00195\ \ \ \ \ \}\ \textcolor{comment}{//\ retranslateUi}}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00197\ \};}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00199\ \textcolor{keyword}{namespace\ }Ui\ \{}
+\DoxyCodeLine{00200\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ui_1_1_main_window}{MainWindow}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_ui___main_window}{Ui\_MainWindow}}\ \{\};}
+\DoxyCodeLine{00201\ \}\ \textcolor{comment}{//\ namespace\ Ui}}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00203\ QT\_END\_NAMESPACE}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00205\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ UI\_MAINWINDOW\_H}}
+
+\end{DoxyCode}

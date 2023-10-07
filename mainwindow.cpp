@@ -1,13 +1,9 @@
-
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-
-
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
-{
+    , ui(new Ui::MainWindow) {
     CCustomXML *xml = new CCustomXML();
     xml->procSaveXML("books.xml");
     delete xml;
@@ -45,11 +41,9 @@ MainWindow::MainWindow(QWidget *parent)
     CCustomXML *xml1 = new CCustomXML();
     xml1->procLoadXML("books.xml");
     delete xml1;
-
 }
 
-MainWindow::~MainWindow()
-{
+MainWindow::~MainWindow(){
     delete ui;
     delete comp;
     delete bcomp;
@@ -58,13 +52,10 @@ MainWindow::~MainWindow()
 }
 
 
-void MainWindow::on_pushButton_clicked()
-{
-
+void MainWindow::on_pushButton_clicked(){
 }
 
-void MainWindow::resizeEvent(QResizeEvent *event)
-{
+void MainWindow::resizeEvent(QResizeEvent *event){
     QMainWindow::resizeEvent(event);
 
     // Update the geometry of the components based on the new size of the main window
@@ -75,15 +66,11 @@ void MainWindow::resizeEvent(QResizeEvent *event)
 }
 
 // Menu  - File Open -action
-void MainWindow::on_actionOpen_triggered()
-{
-
+void MainWindow::on_actionOpen_triggered(){
 }
 
 // Menu  - New File -action
-void MainWindow::on_actionNew_File_triggered()
-{
-
+void MainWindow::on_actionNew_File_triggered(){
 }
 
 

@@ -1,9 +1,7 @@
 
 #include "sbottomcomponet.h"
 
-CBottomComponent::CBottomComponent(QWidget *parent)
-    : QWidget{parent}
-{
+CBottomComponent::CBottomComponent(QWidget *parent): QWidget{parent}{
     //Create button 0
     productA = CFactory::createCustomComponent('A', this);
     if (productA){
@@ -38,7 +36,6 @@ CBottomComponent::CBottomComponent(QWidget *parent)
         productE->operation();
         connect(productE->getSpan(), SIGNAL(clickButton(int)), this, SLOT(ProcClickButton(int)));
     }
-
 }
 
 

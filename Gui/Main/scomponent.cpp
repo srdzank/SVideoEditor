@@ -1,10 +1,7 @@
 
 #include "scomponent.h"
 
-CMainComponent::CMainComponent(QWidget *parent)
-    : QWidget{parent}
-{
-
+CMainComponent::CMainComponent(QWidget *parent): QWidget{parent}{
 }
 
 void CMainComponent::closeEvent(QCloseEvent* event){

@@ -1,15 +1,12 @@
 #include "cxmlhelper.h"
 
-
-CXMLHelper::CXMLHelper()
-{
+CXMLHelper::CXMLHelper(){
     // Create an XML document with the XML declaration
     QDomNode xmlNode = m_xmlDocument.createProcessingInstruction("xml", "version=\"1.0\" encoding=\"UTF-8\"");
     m_xmlDocument.insertBefore(xmlNode, m_xmlDocument.firstChild());
 }
 
-bool CXMLHelper::loadXML(const QString& filePath)
-{
+bool CXMLHelper::loadXML(const QString& filePath){
     QFile file(filePath);
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
         return false;
@@ -24,8 +21,7 @@ bool CXMLHelper::loadXML(const QString& filePath)
     return true;
 }
 
-bool CXMLHelper::saveXML(const QString& filePath)
-{
+bool CXMLHelper::saveXML(const QString& filePath){
     QFile file(filePath);
     if (!file.open(QIODevice::WriteOnly | QIODevice::Text))
         return false;
@@ -36,23 +32,19 @@ bool CXMLHelper::saveXML(const QString& filePath)
     return true;
 }
 
-QDomElement CXMLHelper::rootElement() const
-{
+QDomElement CXMLHelper::rootElement() const {
     return m_xmlDocument.documentElement();
 }
 
-QDomElement CXMLHelper::createElement(const QString& tagName)
-{
+QDomElement CXMLHelper::createElement(const QString& tagName) {
     return m_xmlDocument.createElement(tagName);
 }
 
-void CXMLHelper::appendElement(QDomElement& parent, QDomElement& child)
-{
+void CXMLHelper::appendElement(QDomElement& parent, QDomElement& child) {
     parent.appendChild(child);
 }
 
-QString CXMLHelper::readElementText(const QDomElement& element, const QString& tagName)
-{
+QString CXMLHelper::readElementText(const QDomElement& element, const QString& tagName) {
     QDomNodeList nodes = element.elementsByTagName(tagName);
     if (!nodes.isEmpty())
     {
@@ -62,8 +54,7 @@ QString CXMLHelper::readElementText(const QDomElement& element, const QString& t
     return QString();
 }
 
-void CXMLHelper::writeElementText(QDomElement& element, const QString& tagName, const QString& text)
-{
+void CXMLHelper::writeElementText(QDomElement& element, const QString& tagName, const QString& text) {
     QDomElement tagElement = m_xmlDocument.createElement(tagName);
     QDomText textNode = m_xmlDocument.createTextNode(text);
     tagElement.appendChild(textNode);
