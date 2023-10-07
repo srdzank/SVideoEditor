@@ -176,7 +176,7 @@ void CTransparentWidget::setPos(float pos){
     mpos = pos;
 }
 
-void CTransparentWidget::paintEvent(QPaintEvent* event)
+void CTransparentWidget::paintEvent(QPaintEvent* )
 {
     QPainter painter(this);
 
@@ -198,7 +198,7 @@ CTimeLineWidget::CTimeLineWidget(QWidget *parent) : QWidget(parent)
 {
 }
 
-void CTimeLineWidget::paintEvent(QPaintEvent* event)
+void CTimeLineWidget::paintEvent(QPaintEvent* )
 {
     QPainter painter(this);
 

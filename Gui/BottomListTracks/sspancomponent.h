@@ -83,7 +83,7 @@ public:
     explicit CTransparentWidget(QWidget *parent = nullptr);
     void setPos(float pos);
 protected:
-    void paintEvent(QPaintEvent* event) override;
+    void paintEvent(QPaintEvent* ) override;
 private:
     float mpos;
 };
@@ -96,7 +96,7 @@ public:
     explicit CTimeLineWidget(QWidget *parent = nullptr);
 
 protected:
-    void paintEvent(QPaintEvent* event) override;
+    void paintEvent(QPaintEvent* ) override;
 private:
 };
 

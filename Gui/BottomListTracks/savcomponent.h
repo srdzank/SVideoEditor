@@ -79,7 +79,7 @@ private:
     int currentType;
     CTransparentWidget *transWidg;
     QTimer shotTimer;
-    float playPosition;
+    double playPosition;
 };
 
 #endif // SAVCOMPONENT_H

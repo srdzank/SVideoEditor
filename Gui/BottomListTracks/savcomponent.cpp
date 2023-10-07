@@ -63,7 +63,7 @@ CAudioVideoComponent::CAudioVideoComponent(QWidget *parent):QWidget(parent){
         // Code to be executed when the timer times out
         transWidg->setPos(playPosition);
         transWidg->repaint();
-        playPosition =  playPosition <= 100 ? playPosition += 0.1: playPosition = 0;
+        playPosition =  playPosition <= 100.0 ? playPosition += 0.1: playPosition = 0.0;
     });
 }
 

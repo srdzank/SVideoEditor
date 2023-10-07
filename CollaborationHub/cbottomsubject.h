@@ -38,9 +38,7 @@ class CConcreteObserver : public Observer
 signals:
     void someSignal(int data);
 public slots:
-    void handleSignal(int data){
-        int stop = 0;
-    }
+    void handleSignal(int );
 public:
     explicit CConcreteObserver(QWidget* parent = nullptr) : Observer(parent) {}
 

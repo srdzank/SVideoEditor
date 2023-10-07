@@ -33,3 +33,6 @@ void CConcreteObserver::update(int data) {
     std::cout << "Observer received data: " << data << std::endl;
     emit someSignal(data);
 }
+
+void CConcreteObserver::handleSignal(int ){
+}
