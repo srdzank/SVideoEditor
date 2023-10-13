@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.15.2
+** Created by: Qt User Interface Compiler version 6.6.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -10,7 +10,7 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
-#include <QtWidgets/QAction>
+#include <QtGui/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
@@ -56,69 +56,69 @@ public:
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
-            MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
+            MainWindow->setObjectName("MainWindow");
         MainWindow->resize(800, 600);
         actionOpen = new QAction(MainWindow);
-        actionOpen->setObjectName(QString::fromUtf8("actionOpen"));
+        actionOpen->setObjectName("actionOpen");
         actionNew_File = new QAction(MainWindow);
-        actionNew_File->setObjectName(QString::fromUtf8("actionNew_File"));
+        actionNew_File->setObjectName("actionNew_File");
         actionSave = new QAction(MainWindow);
-        actionSave->setObjectName(QString::fromUtf8("actionSave"));
+        actionSave->setObjectName("actionSave");
         actionSave_as = new QAction(MainWindow);
-        actionSave_as->setObjectName(QString::fromUtf8("actionSave_as"));
+        actionSave_as->setObjectName("actionSave_as");
         actionSend_File = new QAction(MainWindow);
-        actionSend_File->setObjectName(QString::fromUtf8("actionSend_File"));
+        actionSend_File->setObjectName("actionSend_File");
         actionRevert = new QAction(MainWindow);
-        actionRevert->setObjectName(QString::fromUtf8("actionRevert"));
+        actionRevert->setObjectName("actionRevert");
         actionClose = new QAction(MainWindow);
-        actionClose->setObjectName(QString::fromUtf8("actionClose"));
+        actionClose->setObjectName("actionClose");
         actionProperties = new QAction(MainWindow);
-        actionProperties->setObjectName(QString::fromUtf8("actionProperties"));
+        actionProperties->setObjectName("actionProperties");
         actionPrint = new QAction(MainWindow);
-        actionPrint->setObjectName(QString::fromUtf8("actionPrint"));
+        actionPrint->setObjectName("actionPrint");
         actionView_all_recent_files = new QAction(MainWindow);
-        actionView_all_recent_files->setObjectName(QString::fromUtf8("actionView_all_recent_files"));
+        actionView_all_recent_files->setObjectName("actionView_all_recent_files");
         actionUndo = new QAction(MainWindow);
-        actionUndo->setObjectName(QString::fromUtf8("actionUndo"));
+        actionUndo->setObjectName("actionUndo");
         actionRedo = new QAction(MainWindow);
-        actionRedo->setObjectName(QString::fromUtf8("actionRedo"));
+        actionRedo->setObjectName("actionRedo");
         actionCut = new QAction(MainWindow);
-        actionCut->setObjectName(QString::fromUtf8("actionCut"));
+        actionCut->setObjectName("actionCut");
         actionCopy = new QAction(MainWindow);
-        actionCopy->setObjectName(QString::fromUtf8("actionCopy"));
+        actionCopy->setObjectName("actionCopy");
         actionPaste = new QAction(MainWindow);
-        actionPaste->setObjectName(QString::fromUtf8("actionPaste"));
+        actionPaste->setObjectName("actionPaste");
         actionRemove = new QAction(MainWindow);
-        actionRemove->setObjectName(QString::fromUtf8("actionRemove"));
+        actionRemove->setObjectName("actionRemove");
         actionDelete = new QAction(MainWindow);
-        actionDelete->setObjectName(QString::fromUtf8("actionDelete"));
+        actionDelete->setObjectName("actionDelete");
         actionSelect_All = new QAction(MainWindow);
-        actionSelect_All->setObjectName(QString::fromUtf8("actionSelect_All"));
+        actionSelect_All->setObjectName("actionSelect_All");
         actionAdvance = new QAction(MainWindow);
-        actionAdvance->setObjectName(QString::fromUtf8("actionAdvance"));
+        actionAdvance->setObjectName("actionAdvance");
         centralwidget = new QWidget(MainWindow);
-        centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
+        centralwidget->setObjectName("centralwidget");
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
-        menubar->setObjectName(QString::fromUtf8("menubar"));
+        menubar->setObjectName("menubar");
         menubar->setGeometry(QRect(0, 0, 800, 25));
         menuFile = new QMenu(menubar);
-        menuFile->setObjectName(QString::fromUtf8("menuFile"));
+        menuFile->setObjectName("menuFile");
         menuEdit = new QMenu(menubar);
-        menuEdit->setObjectName(QString::fromUtf8("menuEdit"));
+        menuEdit->setObjectName("menuEdit");
         menuView = new QMenu(menubar);
-        menuView->setObjectName(QString::fromUtf8("menuView"));
+        menuView->setObjectName("menuView");
         menuInsert = new QMenu(menubar);
-        menuInsert->setObjectName(QString::fromUtf8("menuInsert"));
+        menuInsert->setObjectName("menuInsert");
         menuTools = new QMenu(menubar);
-        menuTools->setObjectName(QString::fromUtf8("menuTools"));
+        menuTools->setObjectName("menuTools");
         menuOptions = new QMenu(menubar);
-        menuOptions->setObjectName(QString::fromUtf8("menuOptions"));
+        menuOptions->setObjectName("menuOptions");
         menuHelp = new QMenu(menubar);
-        menuHelp->setObjectName(QString::fromUtf8("menuHelp"));
+        menuHelp->setObjectName("menuHelp");
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
-        statusbar->setObjectName(QString::fromUtf8("statusbar"));
+        statusbar->setObjectName("statusbar");
         MainWindow->setStatusBar(statusbar);
 
         menubar->addAction(menuFile->menuAction());

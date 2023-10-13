@@ -24,7 +24,7 @@ void CBaseComponent::mouseReleaseEvent(QMouseEvent* event){
 }
 
 
-void CBaseComponent::enterEvent(QEvent* event){
+void CBaseComponent::enterEvent(QEnterEvent* event){
     isHovered = true;
     update(); // Trigger repaint to change color
     QWidget::enterEvent(event);

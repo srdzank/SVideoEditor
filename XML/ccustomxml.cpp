@@ -49,9 +49,9 @@ void CCustomXML::procLoadXML(const QString& fileName){
 
     while (!xmlReader.atEnd() && !xmlReader.hasError()){
         xmlReader.readNext();
-        if (xmlReader.isStartElement() && xmlReader.name() == "book") {
+        if (xmlReader.isStartElement() && xmlReader.name().toString() == "book") {
             QString title, author, year;
-            while (!xmlReader.atEnd() && !(xmlReader.isEndElement() && xmlReader.name() == "book")){
+            while (!xmlReader.atEnd() && !(xmlReader.isEndElement() && xmlReader.name().toString() == "book")){
                 xmlReader.readNext();
                 if (xmlReader.isStartElement()){
                     QString elementName = xmlReader.name().toString();
